@@ -33,7 +33,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+* The UI layout part was challenging at first. Oftentimes I forgot to hold down `ctrl` to create functions for a UI component (e.g. UITextField) or connect a component to an existing function, thus messing up the View.
+* It took me awhile to figure out how to save/update data between *Home* and *Settings*. Originally, I thought I should retrieve the recently saved default percentages in `viewOnLoad`; actually, I should retrieve in `viewWillAppear`.
+* When updating the theme color, the default colors are not enough. Moreover, it is tedious to specify the rgb components for UIColor; the cleanest way would be to use hex. So, I searched up online and found out that I could convert hex to rgb by adding or shifting bits like the way we did in `C'.
 
 ## License
 
