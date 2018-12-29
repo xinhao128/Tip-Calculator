@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [x] Settings page to change the theme (light or dark)
+- [x] Settings page to change the theme color (light or dark)
 
 ## Video Walkthrough 
 
