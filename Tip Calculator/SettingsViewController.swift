@@ -59,11 +59,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func setDefaultTipPercentage(_ sender: Any) {
-        UserDefaults.standard.set(defaultTip.selectedSegmentIndex, forKey: "Index")
+        let defaults = UserDefaults.standard
+        defaults.set(defaultTip.selectedSegmentIndex, forKey: "Index")
+        defaults.synchronize()
     }
     
     @IBAction func setDefaultThemeColor(_ sender: Any) {
-        UserDefaults.standard.set(defaultTheme.selectedSegmentIndex, forKey:"IndexTheme")
+        let defaults = UserDefaults.standard
+        defaults.set(defaultTheme.selectedSegmentIndex, forKey:"IndexTheme")
+        defaults.synchronize()
         
         if (defaultTheme.selectedSegmentIndex == 1) {
             darkTheme()

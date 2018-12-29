@@ -81,7 +81,9 @@ class ViewController: UIViewController {
 
     @IBAction func calculateTip(_ sender: Any) {
         calculateTipHelper()
-        UserDefaults.standard.set(tipControl.selectedSegmentIndex, forKey: "Index")
+        let defaults = UserDefaults.standard
+        defaults.set(tipControl.selectedSegmentIndex, forKey: "Index")
+        defaults.synchronize()
     }
     
     func calculateTipHelper()
